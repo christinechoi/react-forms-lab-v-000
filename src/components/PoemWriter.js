@@ -4,8 +4,22 @@ class PoemWriter extends React.Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      value: ""
+    };
   }
+
+
+
+  handleInput = event => {
+    const text = event.target.value
+
+    this.setState({
+      value: text
+    });
+  }
+
+
 
   render() {
     return (
@@ -13,6 +27,8 @@ class PoemWriter extends React.Component {
         <textarea 
           rows="3" 
           cols="60" 
+          value={this.state.value}
+          onChange={this.handleInput}
         />
         <div 
           id="poem-validation-error" 

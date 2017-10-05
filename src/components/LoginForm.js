@@ -4,15 +4,14 @@ class LoginForm extends React.Component {
   constructor() {
     super();
 
-
     this.state = {
       value: "",
       password: ""
     };
 
-    this.handleInput = this.handleInput.bind(this);
-    this.handleInputUsername = this.handleInputUsername.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleInput = this.handleInput.bind(this);
+    // this.handleInputUsername = this.handleInputUsername.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput = event => {
@@ -23,7 +22,6 @@ class LoginForm extends React.Component {
       password: text
     });
   }
-
 
   handleInputUsername = event => {
     var username = event.target.value
